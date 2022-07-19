@@ -18,7 +18,6 @@ const Home: NextPage = () => {
         <input id="my-drawer-3" type="checkbox" className="drawer-toggle" /> 
         <div className="drawer-content flex flex-col md:flex-row">
           <div className="w-full md:w-64 md:h-screen navbar md:flex-col bg-base-300">
-            
             <div className="flex-none md:hidden">
               <label htmlFor="my-drawer-3" className="btn btn-square btn-ghost">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" className="inline-block w-6 h-6 stroke-current">
@@ -27,19 +26,15 @@ const Home: NextPage = () => {
               </label>
             </div> 
           
-          <div className="px-2 mx-2 md:hidden">Samuel Steiner</div>
-
-
-          <div className="hidden md:flex flex-col items-center -mx-2 my-2">
-            <div className="object-cover w-24 h-24 mx-2 avatar mask mask-hexagon-2 bg-green-500">
-              <Image alt="Samuel Stiener" layout="fill" src="/profile.jpg">
-
-              </Image>
-            </div> 
-            
-            <h4 className="mx-2 mt-2 font-medium">Samuel Steiner</h4>
-          </div>
-
+            <div className="px-2 mx-2 md:hidden">Samuel Steiner</div>
+            {/* Top part */}
+            <div className="hidden md:flex flex-col items-center -mx-2 my-2">
+              <div className="object-cover w-24 h-24 mx-2 avatar mask mask-hexagon-2 bg-green-500"> 
+                <Image alt="Samuel Stiener" layout="fill" src="/profile.jpg"></Image>
+              </div> 
+              
+              <h4 className="mx-2 mt-2 font-medium">Samuel Steiner</h4>
+            </div>
 
           <div className="grow w-60 flex-none hidden rounded-box text-center m-auto md:block">
             <ul>
@@ -95,9 +90,9 @@ const Home: NextPage = () => {
                 Steiner_Samuel@Protonmail.com
               </a>
           </p>
-        </div>
+          </div>
         
-        <div className="Content overflow-x-hidden w-screen">
+          <div className="Content overflow-x-hidden w-screen">
               <div className="w-screen h-screen snap snap-y snap-mandatory overflow-scroll overflow-x-hidden">
                 <div className="w-screen h-screen snap snap-center bg-red-400" id="Home">
                   Home
@@ -114,6 +109,7 @@ const Home: NextPage = () => {
               </div>
           </div>
         </div> 
+        
         <div className="drawer-side">
           <label htmlFor="my-drawer-3" className="drawer-overlay"></label> 
           <ul className="p-4 overflow-y-auto w-80 bg-base-100">
