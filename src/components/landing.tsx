@@ -3,7 +3,7 @@ import type { NextPage } from "next";
 const Landing: NextPage = () => {
   return (
     <div
-      className="hero min-h-screen md:w-[calc(100%-16rem)] bg-neutral/[.9]"
+      className="hero h-[calc(100vh-4rem)] md:h-screen md:w-[calc(100%-16rem)] bg-neutral/[.9]"
       style={{
         backgroundImage: `url("/images/jumboBG.webp")`,
         backgroundBlendMode: `darken`,

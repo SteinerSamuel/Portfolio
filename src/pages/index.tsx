@@ -96,17 +96,17 @@ const Home: NextPage = () => {
           </div>
 
           <div className="Content overflow-x-hidden w-screen">
-            <div className="w-screen h-screen snap snap-y snap-mandatory overflow-scroll overflow-x-hidden">
-              <div className="w-screen h-screen snap snap-center" id="Home">
+            <div className="w-screen h-[calc(100vh-4rem)] md:h-screen snap snap-y snap-mandatory overflow-scroll overflow-x-hidden">
+              <div className="w-screen h-[calc(100vh-4rem)]md:h-screen snap snap-center" id="Home">
                 <Landing />
               </div>
-              <div className="w-scren h-screen snap-center" id="About">
+              <div className="w-scren h-[calc(100vh-4rem)] md:h-screen snap-center" id="About">
                 <About />
               </div>
-              <div className="w-screen h-screen snap-center" id="Projects">
+              <div className="w-screen h-[calc(100vh-4rem)] md:h-screen snap-center" id="Projects">
                 Projects
               </div>
-              <div className="w-screen h-screen snap-center" id="Research">
+              <div className="w-screen h-[calc(100vh-4rem)] md:h-screen snap-center" id="Research">
                 Research
               </div>
             </div>
@@ -116,26 +116,34 @@ const Home: NextPage = () => {
         <div className="drawer-side">
           <label htmlFor="my-drawer-3" className="drawer-overlay"></label>
           <ul className="p-4 overflow-y-auto w-80 bg-base-100">
-            <li>
-              <button className="btn bg-transparent border-transparent w-60">
-                Home
-              </button>
-            </li>
-            <li>
-              <button className="btn bg-transparent border-transparent w-60">
-                About
-              </button>
-            </li>
-            <li>
-              <button className="btn bg-transparent border-transparent w-60">
-                Project
-              </button>
-            </li>
-            <li>
-              <button className="btn bg-transparent border-transparent w-60">
-                Research
-              </button>
-            </li>
+                <li>
+                  <Link href="#Home">
+                    <button className="btn bg-transparent border-transparent w-60">
+                      Home
+                    </button>
+                  </Link>
+                </li>
+                <li>
+                  <Link href="#About" scroll={true}>
+                    <button className="btn bg-transparent border-transparent w-60">
+                      About
+                    </button>
+                  </Link>
+                </li>
+                <li>
+                  <Link href="#Projects" scroll={true}>
+                    <button className="btn bg-transparent border-transparent w-60">
+                      Project
+                    </button>
+                  </Link>
+                </li>
+                <li>
+                  <Link href="#Research" scroll={true}>
+                    <button className="btn bg-transparent border-transparent w-60">
+                      Research
+                    </button>
+                  </Link>
+                </li>
           </ul>
         </div>
       </div>
