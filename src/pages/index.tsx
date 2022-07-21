@@ -1,11 +1,11 @@
-import type { NextPage } from 'next'
-import Head from 'next/head'
-import Link from 'next/link'
-import Image from 'next/image'
+import type { NextPage } from "next";
+import Head from "next/head";
+import Link from "next/link";
+import Image from "next/image";
 
-import Landing from '../components/landing'
-import Socials from '../components/socials'
-
+import Landing from "../components/landing";
+import About from "../components/about";
+import Socials from "../components/socials";
 
 const Home: NextPage = () => {
   return (
@@ -16,107 +16,131 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      
       <div className="drawer">
-        <input id="my-drawer-3" type="checkbox" className="drawer-toggle" /> 
+        <input id="my-drawer-3" type="checkbox" className="drawer-toggle" />
         <div className="drawer-content flex flex-col md:flex-row">
-          <div className="w-full md:w-64 md:h-screen navbar md:flex-col bg-base-300">
+          <div className="w-full md:w-64 md:h-screen navbar md:flex-col bg-base">
             <div className="flex-none md:hidden">
               <label htmlFor="my-drawer-3" className="btn btn-square btn-ghost">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" className="inline-block w-6 h-6 stroke-current">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16" />
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  className="inline-block w-6 h-6 stroke-current"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    d="M4 6h16M4 12h16M4 18h16"
+                  />
                 </svg>
               </label>
-            </div> 
-          
+            </div>
+
             <div className="px-2 mx-2 md:hidden">Samuel Steiner</div>
             {/* Top part */}
             <div className="hidden md:flex flex-col items-center -mx-2 my-2">
-              <div className="object-cover w-24 h-24 mx-2 avatar mask mask-hexagon-2 bg-green-500"> 
-                <Image alt="Samuel Stiener" layout="fill" src="/images/profile.jpg"></Image>
-              </div> 
-              
+              <div className="object-cover w-24 h-24 mx-2 avatar mask mask-hexagon-2 bg-green-500">
+                <Image
+                  alt="Samuel Stiener"
+                  layout="fill"
+                  src="/images/profile.jpg"
+                ></Image>
+              </div>
+
               <h4 className="mx-2 mt-2 font-medium">Samuel Steiner</h4>
             </div>
 
-          <div className="grow w-60 flex-none hidden rounded-box text-center m-auto md:block">
-            <ul>
-              <li>
-                <Link href="#Home">
-                  <button className="btn bg-transparent border-transparent w-60">
-                    Home
-                  </button>
-                </Link>
-              </li>
-              <li>
-                <Link href="#About" scroll={true}>
-                  <button className="btn bg-transparent border-transparent w-60">
-                    About
-                  </button>   
-                </Link>             
-              </li>
-              <li>
-                <button className="btn bg-transparent border-transparent w-60">
-                  Project
-                </button>
-              </li>
-              <li>
-                <button className="btn bg-transparent border-transparent w-60">
-                  Research
-                </button>
-              </li>
-            </ul>
-          </div>
+            <div className="grow w-60 flex-none hidden rounded-box text-center m-auto md:block">
+              <ul>
+                <li>
+                  <Link href="#Home">
+                    <button className="btn bg-transparent border-transparent w-60">
+                      Home
+                    </button>
+                  </Link>
+                </li>
+                <li>
+                  <Link href="#About" scroll={true}>
+                    <button className="btn bg-transparent border-transparent w-60">
+                      About
+                    </button>
+                  </Link>
+                </li>
+                <li>
+                  <Link href="#Projects" scroll={true}>
+                    <button className="btn bg-transparent border-transparent w-60">
+                      Project
+                    </button>
+                  </Link>
+                </li>
+                <li>
+                  <Link href="#Research" scroll={true}>
+                    <button className="btn bg-transparent border-transparent w-60">
+                      Research
+                    </button>
+                  </Link>
+                </li>
+              </ul>
+            </div>
 
+            <Socials />
 
-          <Socials />
-
-          {/* E-mail */}
-          <p className="hidden md:block mx-2 mt-1 text-sm font-medium hover:underline">
+            {/* E-mail */}
+            <p className="hidden md:block mx-2 mt-1 text-sm font-medium hover:underline text-primary">
               <a href="mailto:Steiner_Samuel@Protonmail.com">
                 Steiner_Samuel@Protonmail.com
               </a>
-          </p>
+            </p>
           </div>
-        
+
           <div className="Content overflow-x-hidden w-screen">
-              <div className="w-screen h-screen snap snap-y snap-mandatory overflow-scroll overflow-x-hidden">
-                <div className="w-screen h-screen snap snap-center" id="Home">
-                  <Landing />
-                </div>
-                <div className="w-scren h-screen snap-center" id="About">
-                  About
-                </div>
-                <div className="w-screen h-screen snap-center" id="Projects">
-                  Projects
-                </div>
-                <div className="w-screen h-screen snap-center" id="Research">
-                  Research
-                </div>
+            <div className="w-screen h-screen snap snap-y snap-mandatory overflow-scroll overflow-x-hidden">
+              <div className="w-screen h-screen snap snap-center" id="Home">
+                <Landing />
               </div>
+              <div className="w-scren h-screen snap-center" id="About">
+                <About />
+              </div>
+              <div className="w-screen h-screen snap-center" id="Projects">
+                Projects
+              </div>
+              <div className="w-screen h-screen snap-center" id="Research">
+                Research
+              </div>
+            </div>
           </div>
-        </div> 
-        
+        </div>
+
         <div className="drawer-side">
-          <label htmlFor="my-drawer-3" className="drawer-overlay"></label> 
+          <label htmlFor="my-drawer-3" className="drawer-overlay"></label>
           <ul className="p-4 overflow-y-auto w-80 bg-base-100">
-                <li>
-                  <button className="btn bg-transparent border-transparent w-60">Home</button>
-                </li>
-                <li>
-                  <button className="btn bg-transparent border-transparent w-60">About</button>                
-                </li>
-                <li>
-                  <button className="btn bg-transparent border-transparent w-60">Project</button>
-                </li>
-                <li>
-                  <button className="btn bg-transparent border-transparent w-60">Research</button>
-                </li>
-            </ul>
+            <li>
+              <button className="btn bg-transparent border-transparent w-60">
+                Home
+              </button>
+            </li>
+            <li>
+              <button className="btn bg-transparent border-transparent w-60">
+                About
+              </button>
+            </li>
+            <li>
+              <button className="btn bg-transparent border-transparent w-60">
+                Project
+              </button>
+            </li>
+            <li>
+              <button className="btn bg-transparent border-transparent w-60">
+                Research
+              </button>
+            </li>
+          </ul>
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;
