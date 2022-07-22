@@ -13,12 +13,12 @@ export default function ProjectCard({ project }: Props) {
     }
 
     return ( 
-            <div className="flex flex-col rounded-lg shadow-lg bg-neutral-content min-w-64 max-w-64 min-h-64 max-h-80 text-center m-4">
-                <div className="p-6 grow">
+            <div className="flex flex-col rounded-lg shadow-lg bg-neutral-content w-80 h-64 text-center m-4">
+                <div className="flex flex-col p-6 grow max-h-50 h-32">
                     <h5 className="text-primary-content text-xl font-medium mb-2">{project.name}</h5>
-                    <p className="text-primary-content text-base mb-4 w-64"> {project.description}</p>
+                    <p className="text-primary-content text-base mb-4 w-64 grow"> {project.description}</p>
                     <Link href={project.url}>
-                        <button className="btn btn-secondary inline-block px-6 py-2 text-secondary-content font-medium text-xs leading-tight rounded-full ">
+                        <button className="btn btn-secondary inline-block px-6 py-2 text-secondary-content font-medium text-xs leading-tight rounded-full mx-auto">
                             GitHub
                         </button>
                     </Link>
