@@ -8,7 +8,7 @@ import About from "../components/about";
 import Socials from "../components/socials";
 import Projects from "../components/projects";
 
-const Home: NextPage = () => {
+export default function Home() {
   return (
     <div data-theme="night">
       <Head>
@@ -151,5 +151,3 @@ const Home: NextPage = () => {
     </div>
   );
 };
-
-export default Home;
