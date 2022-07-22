@@ -6,6 +6,7 @@ import Image from "next/image";
 import Landing from "../components/landing";
 import About from "../components/about";
 import Socials from "../components/socials";
+import Projects from "../components/projects";
 
 const Home: NextPage = () => {
   return (
@@ -62,21 +63,21 @@ const Home: NextPage = () => {
                   </Link>
                 </li>
                 <li>
-                  <Link href="#About" scroll={true}>
+                  <Link href="#About">
                     <button className="btn bg-transparent border-transparent w-60">
                       About
                     </button>
                   </Link>
                 </li>
                 <li>
-                  <Link href="#Projects" scroll={true}>
+                  <Link href="#Projects">
                     <button className="btn bg-transparent border-transparent w-60">
                       Project
                     </button>
                   </Link>
                 </li>
                 <li>
-                  <Link href="#Research" scroll={true}>
+                  <Link href="#Research">
                     <button className="btn bg-transparent border-transparent w-60">
                       Research
                     </button>
@@ -104,7 +105,7 @@ const Home: NextPage = () => {
                 <About />
               </div>
               <div className="w-screen h-[calc(100vh-4rem)] md:h-screen snap-center" id="Projects">
-                Projects
+                <Projects />
               </div>
               <div className="w-screen h-[calc(100vh-4rem)] md:h-screen snap-center" id="Research">
                 Research
@@ -124,21 +125,21 @@ const Home: NextPage = () => {
                   </Link>
                 </li>
                 <li>
-                  <Link href="#About" scroll={true}>
+                  <Link href="#About">
                     <button className="btn bg-transparent border-transparent w-60">
                       About
                     </button>
                   </Link>
                 </li>
                 <li>
-                  <Link href="#Projects" scroll={true}>
+                  <Link href="#Projects">
                     <button className="btn bg-transparent border-transparent w-60">
                       Project
                     </button>
                   </Link>
                 </li>
                 <li>
-                  <Link href="#Research" scroll={true}>
+                  <Link href="#Research">
                     <button className="btn bg-transparent border-transparent w-60">
                       Research
                     </button>
