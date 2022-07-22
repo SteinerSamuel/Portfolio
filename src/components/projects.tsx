@@ -12,13 +12,14 @@ export default function Projects() {
 
     const { data } = useSWR<listUserReposResponse | null>(
         ["GET /users/{username}/repos", {username: "SteinerSamuel"}],
+         //@ts-ignore 
         request
     );
 
 
     if (!data) {
         return (
-            <div>Loading ... </div>
+            <div>Loading . . . </div>
         )
     }
     
