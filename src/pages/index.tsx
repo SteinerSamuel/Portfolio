@@ -104,7 +104,7 @@ export default function Home() {
               <div className="w-scren h-[calc(100vh-4rem)] md:h-screen snap-center" id="About">
                 <About />
               </div>
-              <div className="w-screen h-[calc(100vh-4rem)] md:h-screen snap-center" id="Projects">
+              <div className="w-screen h-[calc(100vh-4rem)] md:h-screen snap-center bg-gradient-to-b from-neutral-focus to-base overflow-y-scroll overflow-x-hidden" id="Projects">
                 <Projects />
               </div>
               <div className="w-screen h-[calc(100vh-4rem)] md:h-screen snap-center" id="Research">

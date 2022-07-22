@@ -24,12 +24,12 @@ export default function Projects() {
     }
     
     return (
-        <div className="flex flex-wrap p-4 w-screen md:w-[calc(100%-15rem)] h-[calc(100vh-4rem)] md:h-screen bg-gradient-to-b from-neutral-focus to-base justify-evenly overflow-y-scroll">
+        <div className="flex flex-wrap p-4 w-screen md:w-[calc(100%-15rem)] h-[calc(100vh-4rem)] md:h-screen justify-evenly">
             {data['data'].map((project) => (
                 <ProjectCard key={project.id}
                     project={{
                         id: project.id,
-                        name: project.full_name,
+                        name: project.name,
                         description: project.description,
                         url: project.html_url,
                         last_updated: (!project.updated_at) ? null : new Date(project.updated_at),
