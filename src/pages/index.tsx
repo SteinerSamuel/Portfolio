@@ -20,7 +20,7 @@ export default function Home() {
       <div className="drawer">
         <input id="my-drawer-3" type="checkbox" className="drawer-toggle" />
         <div className="drawer-content flex flex-col md:flex-row">
-          <div className="w-full md:w-64 md:h-screen navbar md:flex-col bg-base">
+          <div className="w-full md:w-64 md:h-screen navbar md:flex-col bg-base border-b md:border-r md:border-b-0 border-base-content">
             <div className="flex-none md:hidden">
               <label htmlFor="my-drawer-3" className="btn btn-square btn-ghost">
                 <svg
@@ -72,14 +72,7 @@ export default function Home() {
                 <li>
                   <Link href="#Projects">
                     <button className="btn bg-transparent border-transparent w-60">
-                      Project
-                    </button>
-                  </Link>
-                </li>
-                <li>
-                  <Link href="#Research">
-                    <button className="btn bg-transparent border-transparent w-60">
-                      Research
+                      Projects
                     </button>
                   </Link>
                 </li>
@@ -107,9 +100,6 @@ export default function Home() {
               <div className="w-screen h-[calc(100vh-4rem)] md:h-screen snap-center bg-gradient-to-b from-neutral-focus to-base overflow-y-scroll overflow-x-hidden" id="Projects">
                 <Projects />
               </div>
-              <div className="w-screen h-[calc(100vh-4rem)] md:h-screen snap-center" id="Research">
-                Research
-              </div>
             </div>
           </div>
         </div>
@@ -135,13 +125,6 @@ export default function Home() {
                   <Link href="#Projects">
                     <button className="btn bg-transparent border-transparent w-60">
                       Project
-                    </button>
-                  </Link>
-                </li>
-                <li>
-                  <Link href="#Research">
-                    <button className="btn bg-transparent border-transparent w-60">
-                      Research
                     </button>
                   </Link>
                 </li>

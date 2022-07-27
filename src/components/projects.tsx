@@ -24,7 +24,7 @@ export default function Projects() {
     }
     
     return (
-        <div className="flex flex-wrap p-4 w-screen md:w-[calc(100%-15rem)] h-[calc(100vh-4rem)] md:h-screen justify-evenly">
+        <div className="flex flex-wrap p-4 w-screen md:w-[calc(100%-15rem)] h-[calc(100vh-4rem)] md:h-screen justify-evenly mb-5">
             {data['data'].map((project) => (
                 <ProjectCard key={project.id}
                     project={{
